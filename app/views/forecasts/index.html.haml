@@ -1,0 +1,23 @@
+%h1 Listing forecasts
+
+%table
+  %thead
+    %tr
+      %th Lat
+      %th Lng
+      %th
+      %th
+      %th
+
+  %tbody
+    - @forecasts.each do |forecast|
+      %tr
+        %td= forecast.lat
+        %td= forecast.lng
+        %td= link_to 'Show', forecast
+        %td= link_to 'Edit', edit_forecast_path(forecast)
+        %td= link_to 'Destroy', forecast, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Forecast', new_forecast_path

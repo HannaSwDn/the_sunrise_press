@@ -1,0 +1,14 @@
+%p#notice= notice
+
+%p
+  %b Lat:
+  = @forecast.lat
+%p
+  %b Lng:
+  = @forecast.lng
+
+= link_to 'Edit', edit_forecast_path(@forecast)
+\|
+= link_to 'Back', forecasts_path
+
+%button grjheskfle4
